@@ -1,0 +1,176 @@
+.home {
+  margin-top: 1rem;
+  &_container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+   
+
+    &_content {
+      position: relative;
+      display: grid;
+      justify-self: center;
+
+      &_title {
+        font-size: $biggest-font-size;
+        display: flex;
+        column-gap: 0.25rem;
+        color: $first-color;
+        position: absolute;
+        top: 1rem;
+        justify-self: center;
+
+        span:nth-child(2) {
+          z-index: -1;
+        }
+      }
+      &_tooltip {
+        position: absolute;
+        top: -0.5rem;
+        right: 1.5rem;
+
+        &-img {
+          width: 60px;
+        }
+
+        &-text {
+          background: $gradient-color;
+          padding: 0.25rem 0.75rem;
+          border-radius: 4rem;
+          color: $white-color;
+          font-weight: $small-font-size;
+          position: absolute;
+          transform: translate(80px, -50px);
+          white-space: nowrap;
+        }
+      }
+      &_social {
+        display: grid;
+        justify-content: center;
+        row-gap: 6rem;
+        position: absolute;
+        top: 4rem;
+        left: -11rem;
+
+        &-text {
+          position: relative;
+          rotate: 90deg;
+          font-size: $normal-font-size;
+          font-weight: $font-medium;
+          color: $text-color;
+          &::after {
+            content: "";
+            width: 48px;
+            height: 1px;
+            background-color: $text-color;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            right: -64px;
+          }
+        }
+        &-links {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          margin-top: 1.5rem;
+          position: absolute;
+          transform: translate(27px, 100px);
+
+          a {
+            color: $text-color;
+            transition: 0.3s ease-in-out;
+          }
+          a:hover {
+            color: $first-color;
+            transform: scale(1.2);
+          }
+        }
+      }
+      &-button {
+        justify-self: center;
+        
+      }
+    }
+  }
+}
+
+@include mobile {
+  .home {
+    &_container {
+      padding: 4rem 1rem;
+
+      &_content {
+        justify-self: center;
+        &-img {
+          width: 220px;
+        }
+        &_title-letter {
+          justify-self: center;
+          font-size: 8rem;
+        }
+        &_social {
+          left: -5rem;
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .home {
+    &_container {
+      &_content {
+        &-img {
+          width: 250px;
+        }
+        &_title-letter {
+          font-size: 11rem;
+        }
+        &_social {
+          left: -9rem!important;
+        }
+      }
+    }
+  }
+}
+
+@include laptop {
+    .home {
+        &_container {
+          &_content {
+            &-img {
+              width: 280px;
+            }
+            &_title-letter {
+              font-size: 12rem;
+            }
+            &_social {
+              left: -13rem;
+              
+            }
+          }
+        }
+      }
+}
+
+@include dizüstü{
+    .home {
+        &_container {
+          &_content {
+            &-img {
+              width: 300px;
+            }
+            &_title-letter {
+              font-size: 13rem;
+            }
+            &_social {
+              left: -16rem;
+              
+            }
+          }
+        }
+      }
+}

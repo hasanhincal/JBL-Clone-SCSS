@@ -1,0 +1,127 @@
+%flex-align{
+    display: flex;
+    align-items: center;
+}
+%hover{
+   font-size: large;
+    
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px 20px;
+    top: 0;
+    left: 0;
+    z-index:$fixed ;
+    height: $header-height;
+    
+     &_navbar{
+        @extend %flex-align;
+        justify-content: space-between;
+        font-weight: $font-semi-bold;
+        margin: auto 20px;
+
+        &-logo{
+            color: $first-color;
+            font-size:  $h2-font-size;
+            transition: .3s ease-in-out;
+            &:hover{
+               @extend %hover;
+            }               
+        }
+        
+        &_menu{
+            @extend %flex-align;
+            position: relative;
+            &_list{
+                @extend %flex-align;
+                column-gap: 4rem;
+                &_item{   
+                    &-link{
+                        color: $white-color;
+                        transition: .3s ease-in-out;
+                        &:hover{
+                            @extend %hover;
+                            color: $first-color;
+                        }        
+                    }                   
+                }
+                }
+            &_toggle{
+                position: absolute;
+                right: 0;
+                    
+                &-bi{
+                color: $white-color;
+                font-size: $h1-font-size;
+                font-weight: $font-semi-bold;
+                display: none;
+                transition: .3s ease-in-out;
+
+                &:hover{
+                    @extend %hover;
+                    border: 2px solid $first-color;
+                    border-radius: 6px;
+                    
+                 }       
+                }
+
+            }
+        }
+     }
+    
+}
+
+.blur-header::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(23, 12%, 4%, 0.2);
+    -webkit-backdrop-filter: blur(32px);
+    backdrop-filter: blur(32px);
+    --webkit-backdrop-filter: blur(32px);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+@include mobile{
+.header{
+    &_navbar{
+        &_menu{
+            &_list{
+                &_item{
+                    display: none;
+                }
+            }
+            &_toggle{
+                &-bi{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+}
+
+@include tablet{
+    .header{
+        &_navbar{
+            &_menu{
+                &_list{
+                    &_item{
+                        display: none;
+                    }
+                }
+                &_toggle{
+                    &-bi{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }    
+}

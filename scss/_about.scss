@@ -1,0 +1,43 @@
+.about {
+  &_container {
+    &_content {
+      &_inner {
+        text-align: center;
+        &-text {
+          margin-top: 1.5rem;
+          color: $text-color;
+          
+        }
+      }
+      .button {
+        margin: 1.5rem 0;
+        white-space: nowrap;
+        padding: 0.7rem 4.5rem;
+      }
+      &-img {
+        width: 280px;
+        margin: auto;
+      }
+    }
+  }
+}
+
+@include dizüstü {
+  .about {
+    &_container {
+      &_content {
+        display: grid;
+        grid-template-columns:400px 400px;
+        &_inner{
+          text-align: left;
+          & h2{
+            text-align: left!important;
+          }
+        }
+        &-img {
+          width: 440px;
+        }
+      }
+    }
+  }
+}

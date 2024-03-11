@@ -1,0 +1,30 @@
+.favorite_container{
+         &_content{
+         &_card{
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         transition: .3s ease-in-out;
+         & img{
+             width: 220px;    
+         }
+         & span{
+             color: $text-color;
+         }
+         &:hover{
+            transform: scale(1.2);
+         }
+     }
+     }
+}
+
+@include dizüstü{
+    .favorite_container{
+        &_content{
+            display: grid;
+            grid-template-columns: repeat(4,max-content);
+            column-gap: 2rem;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+.model_container{
+    &_content{
+        position: relative;
+        text-align: center;
+        margin-top: 3rem;
+        justify-self: center;
+        &-img{
+            width: 280px;
+        }
+        &_tooltip{
+            position: absolute;
+            &-img{
+            width: 70px;
+            }
+            &-text{
+                color: $white-color;
+                font-size: $small-font-size;
+                padding: .5rem .8rem;
+                background: $gradient-color;
+                border-radius: 50px;
+                white-space: nowrap;
+                position: absolute;
+                transform: translate(35px,-48px);
+            }
+
+        }
+        & .model-tooltip-1{
+            right: -15px;
+            top: 30px;
+        }
+        & .model-tooltip-2{
+            right: 95px;
+            top: 95px;
+        }
+        & .model-tooltip-3{
+            right: 50px;
+            top: 140px;
+        }
+        & .model-tooltip-4{
+            top: 205px;
+            right: 150px;
+        }
+        &-button{
+            justify-self: center;
+            margin-top: 1.5rem;
+        }
+       
+    }
+}
+
+@include dizüstü{
+    .model_container{
+        &_content{
+            &-img{
+                width: 480px;
+            }
+                          
+            & .model-tooltip-1{
+                right: 15px;
+                top: 80px;
+            }
+            & .model-tooltip-2{
+                right: 185px;
+                top: 155px;
+            }
+            & .model-tooltip-3{
+                right: 110px;
+                top: 290px;
+            }
+            & .model-tooltip-4{
+                top: 369px;
+                right: 310px;
+            }
+            
+        }
+    }
+}

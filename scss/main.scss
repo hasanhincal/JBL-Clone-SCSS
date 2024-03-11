@@ -1,0 +1,103 @@
+// google font
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Gugi&family=Lato:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+// bölümler
+@import "colors";
+@import "variables";
+@import "media-queries";
+@import "header";
+@import "home";
+@import "button";
+@import "about";
+@import "favorite";
+@import "model";
+@import "sponsor";
+@import "footer";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: $body-color;
+    color: $text-color; 
+    font-family: $title-font;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+  
+ .main{
+     overflow: hidden;
+ }
+
+.container{
+    max-width: 1024px;
+    color: $container-color;
+}
+
+.grid{
+    display: grid;
+    margin: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4 { 
+    color: $white-color;
+    font-weight:$font-semi-bold;
+}
+
+img{
+    width: 100%;
+    display: block;
+    height: auto;
+
+}
+
+.container{
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+
+.section{
+    padding-block: 8rem 1rem;
+}
+
+.section-title{
+    font-size: $h2-font-size;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.scrollup{
+    position: fixed;
+    right: 1rem;
+    background: $gradient-color;
+    display: inline-flex;
+    color: $white-color;
+    font-size: 1.25rem;
+    padding: 6px;
+    border-radius: 0.25rem;
+    z-index: 1;
+    transition: bottom 0.4s, transform 0.4s;
+}   
+
+.show-scroll{
+    bottom: 3rem;
+}
+
+.scrollup:hover{
+    transform: translateY(-0.9rem);
+}
+
+
+
